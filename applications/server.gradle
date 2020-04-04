@@ -1,14 +1,56 @@
 apply plugin: "org.springframework.boot"
 apply plugin: "io.spring.dependency-management"
 
+
+
+dependencyManagement {
+    imports {
+        mavenBom "io.pivotal.spring.cloud:spring-cloud-services-dependencies:$springCloudServicesClientLibrariesVersion"
+    }
+}
 dependencies {
     compile project(":components:rest-support")
 
     compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.security:spring-security-core"
+    compile "org.springframework.security:spring-security-config"
+    compile "org.springframework.security:spring-security-web"
 
     compile "com.zaxxer:HikariCP:$hikariVersion"
     compile "mysql:mysql-connector-java:$mysqlVersion"
     compile "ch.qos.logback:logback-classic:$logbackVersion"
 
+    compile "org.springframework.boot:spring-boot-starter-actuator"
+    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry"
+    compile "io.pivotal.spring.cloud:spring-cloud-services-starter-service-registry"
+
     testCompile project(":components:test-support")
 }
+
+//        <!-- Spring MVC Dependency -->
+//        <dependency>
+//        <groupId>org.springframework</groupId>
+//    <artifactId>spring-webmvc</artifactId>
+//<version>${spring.version}</version>
+//</dependency>
+//
+//        <!-- Spring Security Core -->
+//        <dependency>
+//        <groupId>org.springframework.security</groupId>
+//    <artifactId>spring-security-core</artifactId>
+//<version>${spring.version}</version>
+//</dependency>
+//
+//        <!-- Spring Security Config -->
+//        <dependency>
+//        <groupId>org.springframework.security</groupId>
+//    <artifactId>spring-security-config</artifactId>
+//<version>${spring.version}</version>
+//</dependency>
+//
+//        <!-- Spring Security Web -->
+//        <dependency>
+//        <groupId>org.springframework.security</groupId>
+//    <artifactId>spring-security-web</artifactId>
+//<version>${spring.version}</version>
+//</dependency>
