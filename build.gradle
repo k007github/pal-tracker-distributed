@@ -59,4 +59,20 @@ subprojects {
             exceptionFormat = 'full'
         }
     }
+
+
 }
+//bootRun.environment([
+//        "MANAGEMENT_ENDPOINT_HEALTH_SHOW-DETAILS": "ALWAYS",
+//        "MANAGEMENT_HEALTH_CIRCUITBREAKERS.ENABLED": "TRUE",
+//        "MANAGEMENT_HEALTH_HYSTRIX_ENABLED": "FALSE",
+//        "MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS": "always",
+//])
+//
+//
+//test.environment([
+//        "MANAGEMENT_ENDPOINT_HEALTH_SHOW-DETAILS": "ALWAYS",
+//        "MANAGEMENT_HEALTH_CIRCUITBREAKERS.ENABLED": "TRUE",
+//        "MANAGEMENT_HEALTH_HYSTRIX_ENABLED": "FALSE",
+//        "MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS": "always",
+//])
